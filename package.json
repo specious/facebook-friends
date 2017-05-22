@@ -1,0 +1,15 @@
+{
+  "name": "facebook-friends",
+  "version": "1.0.0",
+  "description": "Links to your Facebook friends",
+  "private": true,
+  "preferGlobal": true,
+  "bin": {
+    "facebook-friends": "index.js"
+  },
+  "author": "Ildar Sagdejev <specious@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "osmosis": "^1.1.4"
+  }
+}
