@@ -6,6 +6,14 @@ let url = process.argv[2] || 'http://localhost:9999/in.html';
 
 let textOnly = false;
 
+function trimUrl(url) {
+  let trimChar =
+    (url.indexOf("https://www.facebook.com/profile.php") === 0) ?
+      '&' : '?';
+
+  return url.substring(0, url.indexOf(trimChar));
+}
+
 osmosis
   .get(url)
   .find('li._698') // friend element
@@ -16,9 +24,9 @@ osmosis
   })
   .data(function(data) {
     // Filter out deactivated profiles
+    //
     if (typeof data.link !== "undefined") {
-      // Strip URL arguments
-      let link = data.link.substring(0, data.link.indexOf('?'));
+      let link = trimUrl(data.link);
 
       if (textOnly)
         console.log('<a href="' + link + '">' + data.name + '</a><br>')
