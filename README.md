@@ -1,4 +1,6 @@
-Build a clean list of profile links from a saved page of Facebook friends
+Generate an HTML page showing all of your Facebook friends and click them to visit their profiles.
+
+![Screenshot](screenshot.png)
 
 ## How to use
 
