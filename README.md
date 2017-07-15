@@ -8,8 +8,7 @@ First, `yarn install` dependencies. Then:
 - Scroll down, repeatedly, until all of your friends are loaded
 - Save the page as `in.html`
 - *(Optional)* For the ultimate experience, run `in.html` through [inliner](https://github.com/remy/inliner) to create a self-contained HTML file
-- Host `in.html` on a local server at `http://localhost:9999/in.html`
-- Run `./index.js > friends.html`
+- Run `./index.js in.html > friends.html`
 
 Open `friends.html` in your browser. Enjoy Facebook!
 
